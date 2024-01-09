@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>QR Code Generator</h3>
+        <input type="text" id="qrText" placeholder="QR Code Generator">
+        <div class="imgBox">
+            <img src="" id="imgQR">
+        </div>
+        <button onclick="generateQR()">Generator</button>
+        <I id="name"><p>Designed by - <span>Vineet Singh</span></p></I>
+    </div>
+    <script>
+        let textQr = document.getElementById("qrText");
+        let imgQR = document.getElementById("imgQR");
+        function generateQR(){
+             
+                imgQR.src =" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + textQr.value;
+            
+
+                textQr.value =' ';
+        }
+
+
+    </script>
+</body>
+</html>
